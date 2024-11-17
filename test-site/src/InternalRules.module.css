@@ -1,0 +1,44 @@
+.container {
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-weight: 400;
+    padding: 38px 73px;
+  }
+  
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  
+  .title {
+    color: #ffb100;
+    letter-spacing: 2.25px;
+    text-align: center;
+    align-self: center;
+    font: 45px Oswald, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  
+  .rules {
+    color: #ffffff;
+    letter-spacing: 1.1px;
+    align-self: start;
+    margin-top: 55px;
+    font: 22px Lohit Bengali, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .rules {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }

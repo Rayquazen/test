@@ -1,0 +1,124 @@
+.container {
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 34px 74px 17px;
+  }
+  
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  
+  .title {
+    color: #ffb100;
+    letter-spacing: 2.25px;
+    text-align: center;
+    font: 400 45px Oswald, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  
+  .courtContainer {
+    align-self: stretch;
+    margin-top: 47px;
+  }
+  
+  @media (max-width: 991px) {
+    .courtContainer {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+  .courtGrid {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .courtGrid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .courtColumn {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 33%;
+    margin-left: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .courtColumn {
+      width: 100%;
+    }
+  }
+  
+  .courtWrapper {
+    background-color: transparent;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.5px;
+    width: 100%;
+    padding: 8px 0 18px;
+    font: 400 30px Oswald, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .courtWrapper {
+      margin-top: 40px;
+    }
+  }
+  
+  .courtTitle {
+    align-self: center;
+  }
+  
+  .courtImage {
+    aspect-ratio: 0.78;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    margin-top: 13px;
+  }
+  
+  .description {
+    color: #fff;
+    text-align: center;
+    margin-left: 20px;
+    font: 400 23px 'Lohit Bengali', -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .description {
+      max-width: 100%;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }

@@ -1,0 +1,171 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  justify-content: flex-start;
+}
+
+.mainContent {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+ 
+}
+
+
+
+.header {
+  background-color: rgba(127, 127, 128, 0);
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  padding: 0 60px 0 0;
+  gap: 20px;
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font: 30px Lohit Bengali, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding-right: 20px;
+    white-space: initial;
+  }
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100px;
+  max-width: 100%;
+}
+
+.navigation {
+  display: flex;
+  gap: 40px 46px;
+  flex-wrap: wrap;
+  margin: auto 40px;
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    max-width: 100%;
+    white-space: initial;
+  }
+}
+
+.navItem {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navItem:last-child {
+  font-family: Open Sans, sans-serif;
+}
+
+.backpic{
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/sbornaja-rossii-po-pljazhnomu-volejbolu_1530468763626889815.jpg');
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  background-size: cover;      /* Масштабируем изображение, чтобы оно покрывало весь элемент */
+  background-position: center; /* ��ентрируем изображение */
+}
+
+.hero {
+  display: flex;
+  width: 867px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin: -20px 0 0 70px; */
+  padding-left: 5em;
+ 
+}
+
+.heroTitle {
+  color: #ffb100;
+  text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.58);
+  letter-spacing: 8px;
+  align-self: stretch;
+  z-index: 10;
+  font: 160px Paytone One, sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .heroTitle {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.heroSubtitle {
+  color: #fff;
+  letter-spacing: 4px;
+  margin: 0;
+  font: 500 80px/90px Oswald, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .heroSubtitle {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.ctaButton {
+  border-radius: 35px;
+  background-color: rgba(255, 177, 0, 0.8);
+  margin-top: 105px;
+  overflow: hidden;
+  color: #000;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.4px;
+  padding: 26px 43px;
+  font: 40px Lohit Bengali, sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .ctaButton {
+    margin-top: 40px;
+    white-space: initial;
+    padding: 20px;
+  }
+}
+
+.footer {
+  background-color: rgba(127, 127, 128, 0);
+  margin-top: 31px;
+  width: 100%;
+  overflow: hidden;
+  padding: 37px 70px;
+}
+
+.address {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.25px;
+  font: 25px Lohit Bengali, sans-serif;
+  font-style: normal;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
