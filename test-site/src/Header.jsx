@@ -7,7 +7,7 @@ const Header = () => {
 		{ id: 1, text: "Бронирование", href: "/booking" },
 		{ id: 2, text: "Турниры" },
 		{ id: 3, text: "Новости" },
-		{ id: 4, text: "Вход" },
+		{ id: 4, text: "Вход", href: "/login" },
 	];
 
 	return (

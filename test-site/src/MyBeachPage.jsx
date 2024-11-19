@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import Footer from "./Footer";
@@ -11,8 +10,8 @@ const MyBeachPage = () => {
 	return (
 		<div className={styles.pageWrapper}>
 			<main className={styles.mainContent}>
+				<Header />
 				<div className={styles.backpic}>
-					<Header />
 					<Hero />
 					<Footer />
 				</div>
