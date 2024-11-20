@@ -28,9 +28,6 @@
     }
   }
   
-  .activitiesContainer {
-    margin-top: 69px;
-  }
   
   @media (max-width: 991px) {
     .activitiesContainer {

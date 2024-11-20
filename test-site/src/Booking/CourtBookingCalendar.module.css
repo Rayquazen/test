@@ -1,3 +1,17 @@
+.calendar{
+   display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  font-family: Oswald, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 0px 70px;
+  height: 100%; /* Занимает всю высоту страницы */
+  min-height: 100vh; 
+  overflow: hidden; 
+  background-color: #1f1f1f;
+}
 .logo {
   aspect-ratio: 1;
   object-fit: contain;
@@ -7,20 +21,6 @@
   display: flex;
   z-index: 1000;
   position: absolute;
-}
-
-.calendar {
-  background-color: #1f1f1f;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Центрирование по горизонтали */
-  justify-content: center; /* Центрирование по вертикали */
-  font-family: Oswald, sans-serif;
-  font-weight: 400;
-  text-align: center;
-  padding: 0px 70px;
-  height: 100%; /* Занимает всю высоту страницы */
-  min-height: 100vh; /* Гарантирует, что календарь будет занимать хотя бы всю видимую высоту экрана */
 }
 @media (max-width: 991px) {
   .calendar {

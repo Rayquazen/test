@@ -1,7 +1,8 @@
-import React from "react";
-import { useEffect } from "react";
-import "./Form.css";
-const SignIn = () => {
+import React, { useState, useEffect } from "react";
+import "../components/Form.css";
+import { Link, Navigate } from "react-router-dom";
+
+const RegisterComp = () => {
 	useEffect(() => {
 		// Добавляем стили при монтировании компонента
 		document.body.style.overflow = "hidden"; // Убираем скролл
@@ -11,24 +12,70 @@ const SignIn = () => {
 			document.body.style.overflow = ""; // Сбрасываем скролл
 		};
 	}, []); // Пустой массив, чтобы эффект сработал только один раз
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [navigate, setNavigate] = useState(false);
+
+	const submit = async (event) => {
+		event.preventDefault();
+
+		await fetch("http://localhost:8000/api/register", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				name,
+				email,
+				password,
+			}),
+		});
+		setNavigate(true);
+	};
+	if (navigate) {
+		return <Navigate to="/login" />;
+	}
 	return (
 		<div className="form-container">
-			<p className="title">Login</p>
-			<form className="form">
+			<p className="title">Sign up</p>
+			<form className="form" onSubmit={submit}>
 				<div className="input-group">
 					<label htmlFor="username">Username</label>
-					<input type="text" name="username" id="username" placeholder />
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder="Username"
+						onChange={(event) => setName(event.target.value)}
+					/>
+				</div>
+				<div className="input-group">
+					<label htmlFor="email">Email</label>
+					<input
+						type="text"
+						name="email"
+						id="email"
+						placeholder="Email"
+						onChange={(event) => setEmail(event.target.value)}
+					/>
 				</div>
 				<div className="input-group">
 					<label htmlFor="password">Password</label>
-					<input type="password" name="password" id="password" placeholder />
+					<input
+						type="password"
+						name="password"
+						id="password"
+						placeholder="Enter your password"
+						onChange={(event) => setPassword(event.target.value)}
+					/>
 					<div className="forgot">
 						<a rel="noopener noreferrer" href="#">
 							Forgot Password ?
 						</a>
 					</div>
 				</div>
-				<button className="sign">Sign in</button>
+				<button className="sign">Sign up</button>
 			</form>
 			<div className="social-message">
 				<div className="line" />
@@ -65,13 +112,13 @@ const SignIn = () => {
 				</button>
 			</div>
 			<p className="signup">
-				Don't have an account?
+				Already have account?
 				<a rel="noopener noreferrer" href="#" className>
-					Sign up
+					<Link to="/login">Login</Link>
 				</a>
 			</p>
 		</div>
 	);
 };
 
-export default SignIn;
+export default RegisterComp;

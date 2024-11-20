@@ -1,7 +1,7 @@
 import React from "react";
-import SignInComp from "../components/LoginComponent.jsx";
+import RegisterComp from "../components/RegisterComponent.jsx";
 
-const Login = () => {
+const Register = () => {
 	const MyStyle = {
 		margin: 0,
 		padding: 0,
@@ -11,15 +11,16 @@ const Login = () => {
 		alignItems: "center",
 		minHeight: "100vh",
 		backgroundColor: "#1f1f1f", // Фон страницы
+		overflow: "hidden",
 	};
 
 	return (
 		<>
 			<div style={MyStyle}>
-				<SignInComp />
+				<RegisterComp />
 			</div>
 		</>
 	);
 };
 
-export default Login;
+export default Register;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CourtColumn from "./CourtColumn";
 import LegendItem from "./LegendItem";
 import styles from "./CourtBookingCalendar.module.css";
@@ -24,16 +24,17 @@ const CourtBookingCalendar = () => {
 		{ time: "23:00", color: "blue" },
 	];
 
+	useEffect(() => {
+		// Добавляем стили при монтировании компонента
+		document.body.style.overflow = "hidden"; // Убираем скролл
+
+		// Убираем стили, когда компонент размонтируется
+		return () => {
+			document.body.style.overflow = ""; // Сбрасываем скролл
+		};
+	}, []);
 	return (
 		<section>
-			<Link to="/" className={styles.logo}>
-				<img
-					loading="lazy"
-					src="https://cdn.builder.io/api/v1/image/assets/TEMP/d22eff6f2b65167c70498104bfd87a12281f989afbce655fd2dec77196dd4a01?placeholderIfAbsent=true&apiKey=5d694fdf6b9b46ce8185a79644b61bb9"
-					alt="My Beach Logo"
-					className={styles.logo}
-				/>
-			</Link>
 			<div className={styles.calendar}>
 				<div className={styles.calendarContent}>
 					<div className={styles.courtLabels}>
