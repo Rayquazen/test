@@ -36,6 +36,7 @@ const SignInComp = ({ setName }) => {
 				if (response.ok) {
 					setName("ALEG");
 					setNavigate(true);
+					window.location.href = "/";
 				}
 			})
 			.catch((error) => {
@@ -46,9 +47,9 @@ const SignInComp = ({ setName }) => {
 
 		// const content = await response.json();
 	};
-	if (navigate) {
-		return <Navigate to="/" />;
-	}
+	// if (navigate) {
+	// 	return <Navigate to="/" />;
+	// }
 	return (
 		<div className="form-container">
 			<p className="title">Login</p>

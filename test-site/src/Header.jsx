@@ -34,7 +34,8 @@ const Header = ({ name, setName }) => {
 		{ id: 1, text: "Бронирование", href: "/booking" },
 		{ id: 2, text: "Турниры" },
 		{ id: 3, text: "Новости" },
-		{ id: 4, text: "Выход" },
+		{ id: 4, text: name },
+		{ id: 5, text: "Выход" },
 	];
 
 	// Логика выбора меню в зависимости от авторизации

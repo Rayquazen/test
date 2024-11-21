@@ -5,6 +5,7 @@ import Register from "./pages/Regiter.jsx";
 import Header from "./Header.jsx";
 import Login from "./pages/Login.jsx";
 import { useState, useEffect } from "react";
+import styles from "./MyBeachComponents.module.css";
 
 function App() {
 	const [name, setName] = useState("");
