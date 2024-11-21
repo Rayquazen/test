@@ -26,8 +26,8 @@ header{
 
 
 .header {
-  /* background-color: #1f1f1f; */
-  background-color: #000000;
+  background-color: #1f1f1f;
+  /* background-color: #000000; */
   z-index: 10;
   display: flex;
   width: 100%;

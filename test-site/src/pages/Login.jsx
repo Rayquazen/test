@@ -1,7 +1,7 @@
 import React from "react";
 import SignInComp from "../components/LoginComponent.jsx";
 
-const Login = () => {
+const Login = ({ setName }) => {
 	const MyStyle = {
 		margin: 0,
 		padding: 0,
@@ -16,7 +16,7 @@ const Login = () => {
 	return (
 		<>
 			<div style={MyStyle}>
-				<SignInComp />
+				<SignInComp setName={setName} />
 			</div>
 		</>
 	);

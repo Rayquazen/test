@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./MyBeachComponents.module.css";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,10 @@ const Header = ({ name, setName }) => {
 			},
 			credentials: "include",
 		});
-		setName(""); // Очистить имя пользователя после выхода
+
+		setName(undefined);
+		// console.log(name);
+		// Очистить имя пользователя после выхода
 		// Можно сделать редирект на страницу входа, если нужно:
 		// window.location.href = "/login";
 	};
@@ -35,10 +38,16 @@ const Header = ({ name, setName }) => {
 	];
 
 	// Логика выбора меню в зависимости от авторизации
-	const menu = name === "" ? navItems1 : navItems2;
+	const [menu, setMenu] = useState(navItems1);
+	useEffect(() => {
+		setMenu(name == undefined ? navItems1 : navItems2);
+		document.body.style.overflowX = "hidden"; // Убираем скролл
 
-	console.log(menu);
-
+		// Убираем стили, когда компонент размонтируется
+		return () => {
+			document.body.style.overflow = ""; // Сбрасываем скролл
+		};
+	}, [name]); // Перерендерить меню при изменении имени пользователя
 	return (
 		<div>
 			<header className={styles.header}>

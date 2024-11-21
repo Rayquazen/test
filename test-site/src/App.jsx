@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 
 function App() {
 	const [name, setName] = useState("");
-
 	useEffect(() => {
 		(async () => {
 			const response = await fetch("http://localhost:8000/api/user", {
@@ -20,7 +19,8 @@ function App() {
 
 			const content = await response.json();
 
-			setName(content.name);
+			setName(content.Name);
+			// console.log(content.Name);
 		})();
 	}, []);
 	return (

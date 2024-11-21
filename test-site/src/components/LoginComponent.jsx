@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Form.css";
 import { Link, Navigate } from "react-router-dom";
-const SignInComp = (setName) => {
+const SignInComp = ({ setName }) => {
 	useEffect(() => {
 		// Добавляем стили при монтировании компонента
 		document.body.style.overflow = "hidden"; // Убираем скролл
@@ -31,13 +31,20 @@ const SignInComp = (setName) => {
 				email,
 				password,
 			}),
-		});
+		})
+			.then((response) => {
+				if (response.ok) {
+					setName("ALEG");
+					setNavigate(true);
+				}
+			})
+			.catch((error) => {
+				console.error("Ошибка при запросе:", error); // Выводим ошибку в консоль
+			});
 
-		setNavigate(true);
+		//
 
-		const content = await response.json();
-
-		setName(content.name);
+		// const content = await response.json();
 	};
 	if (navigate) {
 		return <Navigate to="/" />;
